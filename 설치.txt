@@ -1,0 +1,53 @@
+통신규약
+문서객체 속성 수정 설정
+속성 설정 request set attribute
+웹문서 트리거 읽어들이는 구조.
+html-
+자바스크립트 연산자.
+대입연산자.
+비교 연산자
+assignment 연산자
+logical 연산자.
+type operator
+bitwise
+OSI 계층 프로토콜
+악성코드
+input - placeholder
+html tag - a - > a href="#"
+target - self 현재창
+	blank 뉴 창
+ 	parent 상위 프레임
+	top 전체
+
+border 세부설정
+
+
+
+how to install my-sql server on gcp / centos
+
+1. sudo install mysql-server
+
+sudo 통해서 루트유저 권한을 받고, mysql-server 설치.
+엔터엔터
+
+2. sudo systemctl enable mysqld
+sudo통해서 권한 받고, mysqld 활성화
+(시스템 재시작시 mysql이 자동으로 실행되도록하기위해)
+
+3. sudo systemctl start mysqld
+sudo통해서 권한 받고, mysqld 작동!(실행)
+
+4.mysql_secure_installation / mysql -u root -p
+mysql 실행 유저 루트 패스워드사용 / 로그온
+비밀번호 설정 -> 전부 Y
+
+5. create user 'the'@'localhost' identified by '12345678';
+create user 'the'@'%' identified by '12345678';
+유저 the 원격 + 로컬호스트 생성 (비번 12345678)
+
+6. grant all privileges to *.* to 'the'@'%';
+모든 권한 부여, 모든 스키마의 모든 테이블.
+
+7. exit
+bye.
+

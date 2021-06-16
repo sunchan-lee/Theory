@@ -1,0 +1,129 @@
+1. 파일준비
+https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
+
+Java SE Development Kit 11.0.11
+This software is licensed under the Oracle Technology Network License Agreement for Oracle Java SE
+
+Product / File Description
+File Size
+Download
+Linux ARM 64 Debian Package	145.61 MB	                 jdk-11.0.11_linux-aarch64_bin.deb
+Linux ARM 64 RPM Package	152.16 MB	                   jdk-11.0.11_linux-aarch64_bin.rpm
+Linux ARM 64 Compressed Archive	169.53 MB              jdk-11.0.11_linux-aarch64_bin.tar.gz
+Linux x64Debian Package	149.39 MB	                     jdk-11.0.11_linux-x64_bin.deb
+Linux x64 RPM Package	156.07 MB	                       jdk-11.0.11_linux-x64_bin.rpm
+Linux x64 Compressed Archive	173.46 MB	               jdk-11.0.11_linux-x64_bin.tar.gz   <-------------------------------- 이파일 선택
+
+2. 파일업로드...
+gunzip    jdk-11.0.11_linux-x64_bin.tar.gz
+tar -xf   jdk-11.0.11_linux-x64_bin.tar
+jdk-11.0.11 폴더 생성
+3. 생성된 폴더 이동
+sudo mv jdk-11.0.11  /usr/local/
+
+심볼릭 링크 만들기(선택사항)
+sodo ln -s jdk-11.0.11/    java
+
+
+3. JDK환경변수 등록  /etc/profile 에 등록
+경로이동
+cd /etc/
+파일 에 내용 수정(삽입)
+sudo vim  pfofile
+-------------------
+JAVA_HOME=/usr/local/java
+PATH=$PATH:$JAVA_HOME/bin
+export JAVA_HOME PATH
+-------------------
+내용 삽입--아래 파일 예제참고
+
+# /etc/profile
+  
+# System wide environment and startup programs, for login setup
+# Functions and aliases go in /etc/bashrc
+# It's NOT a good idea to change this file unless you know what you
+# are doing. It's much better to create a custom.sh shell script in
+# /etc/profile.d/ to make custom changes to your environment, as this
+# will prevent the need for merging in future updates.
+
+JAVA_HOME=/usr/local/java
+PATH=$PATH:$JAVA_HOME/bin
+export JAVA_HOME PATH
+
+파일에 내용삽입후 저장
+
+4. 환경변수 셀에 적용
+source profile
+
+- java 적용확인
+java -version
+
+--실행예제--
+[coding7749@instance-2 etc]$ java -version
+java version "11.0.11" 2021-04-20 LTS
+Java(TM) SE Runtime Environment 18.9 (build 11.0.11+9-LTS-194)
+Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.11+9-LTS-194, mixed mode)
+
+1. 설치
+sudo yum install mysql-server
+
+2. 시스템 재시작시 mysql이 자동으로 실행되도록하기위해
+sudo systemctl enable mysqld
+
+3. mysql 실행
+sudo systemctl start mysqld
+
+4. mysql 설정하기(보안설정등등)
+mysql_secure_installation
+
+5. mysql root 계정으로 접속
+ mysql -u root -p (생략)
+Enter password: 
+
+유저생성
+mysql> create user 'the'@'localhost' identified by '12345678';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> create user 'the'@'%' identified by '12345678';
+Query OK, 0 rows affected (0.01 sec)
+
+ex> grant select,insert,update on 스키마.테이블 
+모든권한부여  모든스키마의 모든테이블 스키마.table
+mysql> grant all privileges on *.* to 'the'@'%';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> exit
+Bye
+
+톰캣 홈페이지에서 파일다운로드
+https://tomcat.apache.org/download-90.cgi 
+Core:
+  zip (pgp, sha512)
+  tar.gz (pgp, sha512)  <-----------------여기 다운로드
+  32-bit Windows zip (pgp, sha512)
+  64-bit Windows zip (pgp, sha512)
+  32-bit/64-bit Windows Service Installer (pgp, sha512)
+  
+1.  구글GCP에 파일 업로드 
+2.  앞축해제
+   gunzip apache-tomcat-9.0.46.tar.gz
+   tar -xvf apache-tomcat-9.0.46.tar 
+ 
+ apache-tomcat-9.0.46 폴더가 생성됩니다.
+ 
+ 생성된 폴더를 /usr/local 폴더로 이동
+3.  sudo mv apache-tomcat-9.0.46  /usr/local/
+
+4.  sudo vim server.xml 
+내용수정   
+키보드 i키누르면 하단에  --INSERT -- 모드로 바꼈다고 뜨고
+내용 수정하면됩니다.
+
+수정이 완료되면   esc 키 눌러서 --INSERT--모드 해제하고
+
+:wq  (w 저장, q 나가기)
+// unpackWARs, autoDeploy 성능에 영향이 있을수 있으므로 해제
+
+<Host name="localhost"  appBase="."
+            unpackWARs="false" autoDeploy="false">
+        <Context docBase="/home/testtest/src/root" path="" reloadable="false" />
