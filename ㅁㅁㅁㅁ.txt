@@ -1,0 +1,120 @@
+폼 문제
+
+텍스트 희미하게 보이는거
+
+애플 문제 (보안) (2문제) *******
+
+CSS 보더 문제 (두께) width
+
+암호화 방식
+
+전자우편(?)
+
+웹문서 메모리 읽어들일떄 트리구조 -> DOM
+
+허브? -> 네트워크 허브?
+
+아파치 서버 톰캣 구조
+"자동으로 웹서비스 시작하는 타입?"
+
+외부/내부 스타일 시트 적용?
+외부 - link
+내부 - style
+인라인 - 태그안에 스타일 속성
+
+"답중에 없음 / 0 ? -" 문제가 이상함.
+
+
+
+
+
+======
+
+통신규약
+문서객체 속성 수정 설정
+속성 설정 request set attribute
+웹문서 트리거 읽어들이는 구조.
+html-
+자바스크립트 연산자.
+대입연산자.
+비교 연산자
+assignment 연산자
+logical 연산자.
+type operator
+bitwise
+OSI 계층 프로토콜
+악성코드
+input - placeholder
+html tag - a - > a href="#"
+target - self 현재창
+	blank 뉴 창
+ 	parent 상위 프레임
+	top 전체
+
+border 세부설정
+
+==============================================================
+
+01. 웹 서버의 기능
+02 웹 서버
+미리 예약된 프로토콜과 포트 번호
+프로토콜 포트 번호
+HTTP(Hypertext Transfer Protocol) 80
+HTTPS(Hypertext Transfer Protocol(Secure)) 443
+FTP(File Transfer Protocol(Data)) 20
+FTP(File Transfer Protocol(Control)) 21
+Telnet(Telnet Protocol) 23
+SMTP(Simple Mail Transfer Protocol) 25
+POP3(Post Office Protocol-Version 3) 110
+IMAP(Internet Message Access Protocol) 143
+SSH(Secure Shell Remote Login Protocol) 22
+====
+html  head body /html
+====
+
+1. 문서 레이아웃
+01 레이아웃
+태그 설명
+<header> HTML5 문서의 머리말 영역으로 중요한 정보를 표시
+(예 : 사이트의 제목, 로고 등)
+<nav> 내비게이션(navigation) 영역으로 웹 사이트 내에
+분류된 다른 영역으로 이동할 때 사용
+<section> 문서의 영역을 구성할 때 사용. 
+<header>, <article> 태그 등을 포함할 수 있음
+<article>
+독립된 주요 콘텐츠 영역을 정의. 
+하나의 <section> 태그 내에 여러 개의 <article> 태그를
+구성할 수 있음
+<aside> 주요 콘텐츠 이외에 남은 콘텐츠를 표시
+(예 : 사이드 바(sidebar) 등)
+<footer> 사이트의 자세한 정보를 표시
+(예 : 저작권 정보, 관리자 정보, 회사 정보 등)
+
+html tag - a - > a href="#"
+target - self 현재창
+	blank 뉴 창
+ 	parent 상위 프레임
+	top 전체
+
+
+div와 span
+02 입력 양식의 주요 속성
+읽기 전용 속성 : readonly
+텍스트 상자에 쓰기를 제한하고 오직 읽기만 가능하게 설정
+비활성화 속성 : disabled
+텍스트 상자를 비활성화 시킴
+자동 완성 속성 : autocomplete
+사용했던 데이터를 기준으로 입력 중인 텍스트에 자동 완성
+기능을 적용할 수 있음
+자동 포커스 속성 : autofocus
+현재 페이지가 로드될 때 처음으로 입력하고자 하는 폼을
+선택하는 속성
+01. div와 span
+02 입력 양식의 주요 속성
+플레이스 홀더 속성 : placeholder
+현재 폼에 입력해야 하는 텍스트를 희미하게 보여주는 속성
+필수 입력 속성 : required
+반드시 데이터가 입력되어야 하는 폼을 지정하는 속성
+오타 체크 속성 : spellcheck
+
+
